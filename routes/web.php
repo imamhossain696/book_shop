@@ -16,7 +16,7 @@
 Route::get('/', 'WelcomeController@index');
 Route::get('/contact','WelcomeController@contact');
 
-Route::get('/exchange','WelcomeController@exchange');
+
 
 Route::get('/category-view/{id}', 'WelcomeController@category');
 Route::get('/product-details/{id}', 'WelcomeController@productDetails');
@@ -75,4 +75,14 @@ Route::group(['middleware' => 'AuthenticateMiddleware'], function () {
 Route::post('/customer/login','CustomerLoginController@login');
 /*customer logout*/
 Route::post('/customer/logout','CustomerLoginController@customer_logout');
+
+/*book exchange par*/
+
+Route::get('/book-exchange-index','BookExchangeController@exchange')->name('book.exchange');
+Route::get('/exchange-book-register','BookExchangeController@register')->name('book.register');
+Route::post('/exchange-book-register','BookExchangeController@store')->name('book.register.store');
+Route::get('/exchange-offer-books','BookExchangeController@offerbooks')->name('book.offer');
+Route::get('/request-send-page/{centraldata}','BookExchangeController@request_send_page')->name('book.request.page');
+Route::post('/request-send-page/{centraldata}','BookExchangeController@book_request_store')->name('book.request.store');
+/*end of  book exchange part*/
 

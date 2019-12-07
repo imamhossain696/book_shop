@@ -1,17 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="08ae35d7-d237-43dd-a099-fafbe5709f51" name="Default Changelist" comment="" />
+    <list default="true" id="08ae35d7-d237-43dd-a099-fafbe5709f51" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/views/frontEnd/exchange/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Customer.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Customer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CustomerLoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CustomerLoginController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontEnd/exchange/exchange.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontEnd/includes/menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontEnd/includes/menu.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/autoload.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/autoload.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/ClassLoader.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/ClassLoader.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_real.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_real.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution>
       <executable />
     </execution>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="blade" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -80,6 +105,7 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1UasVBD5Z8X6aQxeYW28AtS7wDW" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -123,7 +149,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1575606061876</updated>
-      <workItem from="1575606063613" duration="10464000" />
+      <workItem from="1575606063613" duration="11878000" />
+      <workItem from="1575730561678" duration="16382000" />
     </task>
     <servers />
   </component>
@@ -131,13 +158,49 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="713" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1575734491732">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="713" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/-1440.184.1440.860@0.0.1920.1040" timestamp="1575734491732" />
+    <state x="600" y="286" key="#com.intellij.ide.fileTemplates.ui.ConfigureTemplatesDialog" timestamp="1575734568019">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="600" y="286" key="#com.intellij.ide.fileTemplates.ui.ConfigureTemplatesDialog/0.0.1920.1040/-1440.184.1440.860@0.0.1920.1040" timestamp="1575734568019" />
     <state x="690" y="274" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1575613243604">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="274" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040/-1440.184.1440.860@0.0.1920.1040" timestamp="1575613243604" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1575611470493">
+    <state x="794" y="443" key="NewPhpFileDialog" timestamp="1575734454584">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/-1440.184.1440.860@0.0.1920.1040" timestamp="1575611470493" />
+    <state x="794" y="443" key="NewPhpFileDialog/0.0.1920.1040/-1440.184.1440.860@0.0.1920.1040" timestamp="1575734454584" />
+    <state width="498" height="446" key="SwitcherDM" timestamp="1575732594087">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="498" height="446" key="SwitcherDM/0.0.1920.1040/-1440.184.1440.860@0.0.1920.1040" timestamp="1575732594087" />
+    <state x="656" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1575730562385">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="656" y="343" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/-1440.184.1440.860@0.0.1920.1040" timestamp="1575730562385" />
+    <state x="769" y="436" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1575746654873">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="769" y="436" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040/-1440.184.1440.860@0.0.1920.1040" timestamp="1575746654873" />
+    <state x="656" y="125" width="607" height="789" key="find.popup" timestamp="1575731356757">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="656" y="125" width="607" height="789" key="find.popup/0.0.1920.1040/-1440.184.1440.860@0.0.1920.1040" timestamp="1575731356757" />
+    <state x="601" y="246" width="700" height="530" key="recent.locations.popup" timestamp="1575746745576">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="601" y="246" width="700" height="530" key="recent.locations.popup/0.0.1920.1040/-1440.184.1440.860@0.0.1920.1040" timestamp="1575746745576" />
+    <state x="616" y="240" key="run.anything.popup" timestamp="1575741926415">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/-1440.184.1440.860@0.0.1920.1040" timestamp="1575741926415" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1575746753953">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/-1440.184.1440.860@0.0.1920.1040" timestamp="1575746753953" />
   </component>
 </project>

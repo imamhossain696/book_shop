@@ -21,8 +21,8 @@
                                 <a href="{{ url('/category-view/'.$publishedCategory->id) }}" class="dropdown-toggle menu__link"> {{ $publishedCategory->categoryName }} </a>
                             </li>
                             @endforeach
-                            <li class=" menu__item"><a class="menu__link" href="{{url('/exchange')}}">Exchange</a></li>
-                            
+                            <li class=" menu__item"><a class="menu__link" href="{{route('book.exchange')}}">Exchange</a></li>
+
                             <li class=" menu__item"><a class="menu__link" href="{{url('/contact')}}">Contact</a></li>
                             @if( Session::get('customerId'))
                             <li class=" menu__item"><a class="menu__link" href="{{url('/customer/logout')}}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">logout</a></li>

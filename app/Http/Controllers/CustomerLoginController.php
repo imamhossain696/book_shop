@@ -22,6 +22,7 @@ class CustomerLoginController extends Controller
         if ($verify){
 
             Session::put('customerId', $customer->id);
+            Session::save();
 
             if (Session::has('page_redirect')){
                 Session::forget('page_redirect');

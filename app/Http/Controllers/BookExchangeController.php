@@ -23,7 +23,15 @@ class BookExchangeController extends Controller
 
         if (Session::has('customerId')){
 
-            return view('frontEnd.exchange.index');
+            $my_id = Session::get('customerId');
+
+            //collecting my books
+            $my_books = Customer::find($my_id)->central_datas->where('available',0)->pluck('id');
+
+            $data['book_requests'] = ExchangeRequest::whereIn('centraldata_id',$my_books)->count();
+            $data['book_sent_request'] = ExchangeRequest::whereIn('centraldata_req_id',$my_books)->count();
+
+            return view('frontEnd.exchange.index')->with($data);
 
         }else{
 
@@ -206,9 +214,134 @@ class BookExchangeController extends Controller
            return redirect()->back();
        }
 
+    }
+
+    public function sent_request(){
+
+        if (Session::has('customerId')){
+
+            $customer_id = Session::get('customerId');
+
+            $my_books = Centraldata::where('customer_id',$customer_id)->where('available',0)->get()->pluck('id');
+
+            $books = ExchangeRequest::whereIn('centraldata_req_id',$my_books)->get();
 
 
 
+            $data['books'] = $books;
+
+            return view('frontEnd.exchange.sent_request')->with($data);
+
+        }else{
+
+            return redirect()->to('/checkout')->send();
+        }
+
+
+    }
+
+    public function cancel_request(Request $request){
+
+
+       $exchange = ExchangeRequest::find($request->get('exchange_request_id'));
+
+       if ($exchange->delete()){
+
+           echo json_encode([
+               "status" => 1
+           ]);
+
+       }else{
+           echo json_encode([
+               "status" => 0
+           ]);
+       }
+
+
+    }
+
+    public function received_request(){
+
+        if(Session::has('customerId')){
+
+            $customer_id = Session::get('customerId');
+
+            $my_books = Centraldata::where('customer_id',$customer_id)->where('available',0)->get()->pluck('id');
+
+            $books = ExchangeRequest::whereIn('centraldata_id',$my_books)->get();
+
+
+
+            $data['books'] = $books;
+
+            return view('frontEnd.exchange.received_request')->with($data);
+
+        }else{
+
+            return redirect()->to('/checkout')->send();
+        }
+
+
+    }
+
+    public function accept_request(Request $request){
+
+
+
+        //get the request
+
+         $exchange = ExchangeRequest::find($request->get('exchange_id'));
+
+        //accept the request
+        $exchange->update(["approved"=>1]);
+
+        //update the request in central data
+
+         $exchange->request_details()->update(["available"=>1]);
+        //delete requests for accepting book
+
+
+
+
+        if ($exchange->request_details->sent_requests->where('approved',0)->count()){
+
+           return $exchange->request_details->sent_requests()->delete();
+
+        }
+
+        //update requester book status
+        $exchange->sent_data() ->update(["available"=>1]);
+        //update requester book sent request
+
+        if ($exchange->sent_data->sent_requests->where('approved',0)->count()){
+            $exchange->sent_data->sent_requests()->delete();
+
+        }
+
+        //return
+
+        echo json_encode([
+            "status" => 1
+        ]);
+
+
+    }
+
+    public function history(){
+
+        if (Session::has('customerId')){
+
+            $my_id = Session::get('customerId');
+            $books_exchanged = Customer::find($my_id)->central_datas->where('available',1)->pluck('id');
+
+            $data['books'] = ExchangeRequest::whereIn('centraldata_id',$books_exchanged)->orWhereIn('centraldata_req_id',$books_exchanged)->get();
+
+            return view('frontEnd.exchange.exchanged_history')->with($data);
+
+        }else{
+
+            return redirect()->to('/checkout')->send();
+        }
 
     }
 }

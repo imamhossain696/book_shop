@@ -77,7 +77,11 @@ Route::post('/customer/login','CustomerLoginController@login');
 Route::post('/customer/logout','CustomerLoginController@customer_logout');
 
 /*book exchange par*/
-
+Route::get('/exchange-history','BookExchangeController@history')->name('book.history');
+Route::post('/exchange-accept-request','BookExchangeController@accept_request')->name('book.accept_request');
+Route::get('/exchange-received-request','BookExchangeController@received_request')->name('book.received_request');
+Route::post('/exchange-cancel-request','BookExchangeController@cancel_request')->name('book.cancel_request');
+Route::get('/exchange-sent-request','BookExchangeController@sent_request')->name('book.sent_request');
 Route::get('/book-exchange-index','BookExchangeController@exchange')->name('book.exchange');
 Route::get('/exchange-book-register','BookExchangeController@register')->name('book.register');
 Route::post('/exchange-book-register','BookExchangeController@store')->name('book.register.store');

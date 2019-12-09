@@ -17,7 +17,7 @@ class Centraldata extends Model
 
     public function sent_requests(){
 
-        return $this->hasOne(ExchangeRequest::class,'centraldata_req_id');
+        return $this->hasMany(ExchangeRequest::class,'centraldata_req_id');
     }
 
     public function receive_requets(){

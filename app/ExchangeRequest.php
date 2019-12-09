@@ -10,7 +10,7 @@ class ExchangeRequest extends Model
 
     protected $guarded = [];
 
-    public function C(){
+    public function sent_data(){
 
         return $this->belongsTo(Centraldata::class,'centraldata_req_id');
     }

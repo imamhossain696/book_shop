@@ -3,6 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="08ae35d7-d237-43dd-a099-fafbe5709f51" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Centraldata.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Centraldata.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/ExchangeRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/ExchangeRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/BookExchangeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/BookExchangeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontEnd/exchange/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontEnd/exchange/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,7 +143,8 @@
       <option name="presentableId" value="Default" />
       <updated>1575606061876</updated>
       <workItem from="1575606063613" duration="11878000" />
-      <workItem from="1575730561678" duration="16830000" />
+      <workItem from="1575730561678" duration="17467000" />
+      <workItem from="1575909227106" duration="12494000" />
     </task>
     <servers />
   </component>
@@ -165,14 +172,18 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1920.1040/-1440.184.1440.860@0.0.1920.1040" timestamp="1575732594087" />
-    <state x="656" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1575730562385">
+    <state x="656" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1575923106186">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="656" y="343" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/-1440.184.1440.860@0.0.1920.1040" timestamp="1575730562385" />
-    <state x="769" y="436" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1575746654873">
+    <state x="656" y="343" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/-1440.184.1440.860@0.0.1920.1040" timestamp="1575923106186" />
+    <state x="769" y="436" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1575922633832">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="769" y="436" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040/-1440.184.1440.860@0.0.1920.1040" timestamp="1575746654873" />
+    <state x="769" y="436" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040/-1440.184.1440.860@0.0.1920.1040" timestamp="1575922633832" />
+    <state x="-1425" y="252" width="1414" height="718" maximized="true" key="dock-window-1" timestamp="1575923146119">
+      <screen x="-1440" y="184" width="1440" height="860" />
+    </state>
+    <state x="-1425" y="252" width="1414" height="718" maximized="true" key="dock-window-1/0.0.1920.1040/-1440.184.1440.860@0.0.1920.1040" timestamp="1575923146119" />
     <state x="656" y="125" width="607" height="789" key="find.popup" timestamp="1575731356757">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -185,9 +196,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/-1440.184.1440.860@0.0.1920.1040" timestamp="1575741926415" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1575749144477">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1575917342541">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/-1440.184.1440.860@0.0.1920.1040" timestamp="1575749144477" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/-1440.184.1440.860@0.0.1920.1040" timestamp="1575917342541" />
   </component>
 </project>

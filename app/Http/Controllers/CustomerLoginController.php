@@ -28,9 +28,11 @@ class CustomerLoginController extends Controller
                 Session::forget('page_redirect');
                 return redirect()->to('checkout/shipping');
 
-            }else{
+            }elseif(Session::has('exchange_redirect')){
 
-                return redirect()->to('/');
+                Session::forget('exchange_redirect');
+
+                return redirect()->route('book.exchange');
             }
         }else{
 

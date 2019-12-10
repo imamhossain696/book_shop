@@ -16,14 +16,14 @@
 
                     <thead>
                     <tr>
-                        <th>Book Name</th>
-
-                        <th>Offered Book</th>
-                        <th>Offered Book Author</th>
-                        <th>Offered By</th>
+                        <th>My book</th>
+                        <th>Exchanged With</th>
+                        <th>Author</th>
+                        <th>Owner</th>
                         <th>Phone</th>
+                        <th>Address</th>
                         <th>Date</th>
-                        <th>Action</th>
+
                     </tr>
                     </thead>
 
@@ -32,16 +32,31 @@
                         <tr>
                             @php($my_book = $book->request_details)
                             @php($request_details = $book->sent_data)
-                            <td>{{ $my_book->book_name}}</td>
-                            <td>{{ $request_details->book_name }}</td>
-                            <td>{{ $request_details->author }}</td>
-                            @php($customer = $request_details->customer)
-                            <td>{{$customer->firstName." ".$customer->lastName }}</td>
-                            <td>{{ $customer->phoneNumber }}</td>
-                            <td>{{ $book->created_at }}</td>
-                            <td>
-                                <button value="{{ $book->id }}" class="btn btn-success btn-sm accept_btn">Accept</button>
-                            </td>
+
+                        @if($my_book->customer_id == \Illuminate\Support\Facades\Session::get('customerId'))
+                                <td>{{ $my_book->book_name}}</td>
+                                <td>{{ $request_details->book_name }}</td>
+                                <td>{{ $request_details->author }}</td>
+                                @php($customer = $request_details->customer)
+
+                                <td>{{$customer->firstName." ".$customer->lastName }}</td>
+                                <td>{{ $customer->phoneNumber }}</td>
+                                <td>{{ $customer->address }}</td>
+                                <td>{{ $book->created_at }}</td>
+
+                            @else
+
+                                <td>{{ $request_details->book_name}}</td>
+                                <td>{{ $my_book->book_name }}</td>
+                                <td>{{ $my_book->author }}</td>
+                                @php($customer = $my_book->customer)
+
+                                <td>{{$customer->firstName." ".$customer->lastName }}</td>
+                                <td>{{ $customer->phoneNumber }}</td>
+                                <td>{{ $customer->address }}</td>
+                                <td>{{ $book->created_at }}</td>
+
+                            @endif
 
                         </tr>
                     @endforeach

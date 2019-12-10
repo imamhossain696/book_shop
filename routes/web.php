@@ -77,6 +77,8 @@ Route::post('/customer/login','CustomerLoginController@login');
 Route::post('/customer/logout','CustomerLoginController@customer_logout');
 
 /*book exchange par*/
+/*book exchange par*/
+Route::post('/book-delete','BookExchangeController@book_delete')->name('book.delete');
 Route::get('/exchange-history','BookExchangeController@history')->name('book.history');
 Route::post('/exchange-accept-request','BookExchangeController@accept_request')->name('book.accept_request');
 Route::get('/exchange-received-request','BookExchangeController@received_request')->name('book.received_request');

@@ -35,6 +35,9 @@ class BookExchangeController extends Controller
 
         }else{
 
+
+            Session::put('exchange_redirect',1);
+            Session::save();
             return redirect()->to('/checkout')->send();
         }
 
@@ -342,6 +345,44 @@ class BookExchangeController extends Controller
 
             return redirect()->to('/checkout')->send();
         }
+
+    }
+
+    public function book_delete(Request $request){
+
+
+        //getting request
+
+        $book_id = $request->get('book_id');
+
+        //getting the book
+
+        $book = Centraldata::find($book_id);
+
+        if ($book->delete()){
+
+            //received request
+
+            if ($book->receive_requets->count() >0){
+
+                $book->receive_requets()->delete();
+
+            }
+
+
+
+            //sent request delete
+            if ($book->sent_requests->count() >0){
+
+                $book->sent_requests()->delete();
+
+            }
+
+            echo json_encode([
+                "status" => 1
+            ]);
+        }
+
 
     }
 }

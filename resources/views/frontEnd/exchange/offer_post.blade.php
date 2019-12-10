@@ -8,13 +8,12 @@
 
         {{--my books--}}
         <div class="row" style="margin-top: 50px">
-
-            <div class="col-lg-2">
+            <div class="col-lg-1">
 
             </div>
 
-            <div class="col-sm-12 col-lg-8">
-                <h4 class="text-center">My books</h4>
+            <div class="col-sm-12 col-lg-10">
+                <h4 class="text-center">My Posts</h4>
 
                 <table class="table" width="500">
                     <thead>
@@ -22,6 +21,8 @@
                         <th>Book Name</th>
                         <th>Author</th>
                         <th>Genre</th>
+                        <th>Request Book</th>
+                        <th>Action</th>
                     </tr>
 
                     </thead>
@@ -33,6 +34,8 @@
                             <td>{{ $my_book->book_name }}</td>
                             <td>{{ $my_book->author }}</td>
                             <td>{{ $my_book->genre }}</td>
+                            <td>{{ $my_book->reqbook }}</td>
+                            <td><button class="btn btn-danger post_btn_del" value="{{ $my_book->id }}">Del</button></td>
                         </tr>
 
                     @endforeach
@@ -68,7 +71,7 @@
                         <th>Author</th>
                         <th>Request book</th>
                         <th>Genre</th>
-                        <t>Action</t>
+                        <th>Action</th>
                     </tr>
 
                     </thead>
@@ -105,6 +108,39 @@
 
 
     </div>
+
+    <script>
+        $(document).ready(function () {
+
+            $('.post_btn_del').on('click',function () {
+
+                var book = $(this).val();
+                console.log(book);
+                $.ajax({
+
+                    url:"{{ route('book.delete') }}",
+                    type:"POST",
+                    dataType:"JSON",
+                    data:{
+                        _token:"{{ csrf_token() }}",
+                        book_id : book,
+
+
+                    },
+                    success:function (data) {
+
+                        if (data.status == 1){
+
+                            location.reload();
+
+                        }
+                    }
+
+                })
+
+            })
+        })
+    </script>
 
 
 @endsection

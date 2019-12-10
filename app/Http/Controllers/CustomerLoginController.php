@@ -33,6 +33,9 @@ class CustomerLoginController extends Controller
                 Session::forget('exchange_redirect');
 
                 return redirect()->route('book.exchange');
+            }else{
+                return redirect()->to('/');
+
             }
         }else{
 

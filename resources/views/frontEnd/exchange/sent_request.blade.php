@@ -33,7 +33,7 @@
                             <td>{{ $request_details->book_name}}</td>
                             <td>{{ $request_details->author }}</td>
                             <td>{{ $request_details->genre }}</td>
-                            <td>{{ $my_book->book_name }}</td>
+                            <td>{{ $request_details->customer->name }}</td>
                             <td>{{ $book->created_at }}</td>
                             <td>
                                 <a href="" class="btn btn-info btn-sm">View</a>

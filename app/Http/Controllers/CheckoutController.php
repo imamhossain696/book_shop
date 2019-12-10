@@ -5,12 +5,13 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Customer;
 use Illuminate\Support\Facades\URL;
-use Session;
+
 use App\Shipping;
 use App\Order;
 use App\Payment;
 use App\OrderDetail;
 use Cart;
+use Illuminate\Support\Facades\Session;
 
 class CheckoutController extends Controller {
 
@@ -18,14 +19,22 @@ class CheckoutController extends Controller {
 
         //eturn URL::previous();
 
-        if (strpos(URL::previous(),'cart/show')){
+        if (!Session::has('customerId')){
+            if (strpos(URL::previous(),'cart/show')){
 
-            Session::put('page_redirect',true);
+                Session::put('page_redirect',true);
+            }
+            return view('frontEnd.checkout.checkoutContent');
+        }else{
+
+            return redirect()->to('/');
         }
-        return view('frontEnd.checkout.checkoutContent');
+
+
     }
 
     public function customerRegistration(Request $request) {
+
 
         $this->validate($request,
 
@@ -41,7 +50,9 @@ class CheckoutController extends Controller {
         $customer->districtName = $request->districtName;
         $customer->save();
         $customerId = $customer->id;
+
         Session::put('customerId', $customerId);
+        Session::save();
         return redirect('/checkout/shipping');
     }
 
